@@ -1,0 +1,21 @@
+main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  transition: all .5s ease;
+}
+
+main::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .3), rgba(0, 0, 0, .6), rgba(0, 0, 0, .9));
+}

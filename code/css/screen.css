@@ -1,0 +1,69 @@
+main .screen {
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+  width: 12rem;
+  height: 8rem;
+  transform-style: preserve-3d;
+  animation: animate 30s linear infinite;
+  z-index: 80;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+main .screen .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12rem;
+  height: 8rem;
+  background: var(--PrimaryColor);
+  transform: rotateX(-90deg) translateZ(6rem);
+  filter: blur(.625rem);
+  box-shadow: 0 0 7rem rgba(0, 194, 222, .2), 0 0 7rem rgba(0, 194, 222, .4), 0 0 7rem rgba(0, 194, 222, .6), 0 0 7rem rgba(0, 194, 222, .8), 0 0 7rem rgba(0, 194, 222, 1);
+}
+
+main .screen .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+main .screen .container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(transparent, var(--PrimaryColor));
+  transform: rotateY(calc(90deg * var(--i))) translateZ(6rem);
+}
+
+main .screen .container span video {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  object-position: center;
+  transition: all .5s ease;
+}
+
+main .screen .container span .trailer {
+  display: none;
+}
+
+main .screen .container span .trailer.active {
+  display: block;
+}

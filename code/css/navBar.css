@@ -1,0 +1,59 @@
+main .navBar {
+  position: absolute;
+  top: .3rem;
+  right: 1.5rem;
+  width: 30%;
+  height: .2rem;
+  border-bottom: .2rem solid;
+  border-image: linear-gradient(90deg, transparent, var(--PrimaryColor), var(--PrimaryColor)) 30;
+  background: transparent;
+  box-shadow: var(--OneBoxShadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  transition: all .5s ease;
+  transform-origin: right;
+}
+
+main .navBar.active {
+  top: 4rem;
+  width: 40%;
+  height: 4rem;
+  border-top: .2rem solid;
+  border-image: linear-gradient(90deg, transparent, var(--PrimaryColor), var(--PrimaryColor), transparent) 30;
+  border-bottom: none;
+}
+
+main .navBar li {
+  position: relative;
+  padding: .5rem 0;
+  transform: translateY(-4rem);
+  transition: all .3s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+main .navBar.active li {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+main .navBar li a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .9rem;
+  color: var(--OneColor);
+  text-transform: uppercase;
+  font-weight: 200;
+  padding: .5rem;
+  border-radius: .5rem;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+main .navBar li a:hover {
+  box-shadow: var(--TwoBoxShadow);
+}

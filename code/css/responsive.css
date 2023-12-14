@@ -1,0 +1,102 @@
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 200%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 120%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 80%;
+  }
+  main .screen {
+    display: none;
+  }
+  main .content {
+    max-width: 65%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+  main .navBar {
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+  }
+  main .navBar li {
+    padding: .3rem 0;
+  }
+  main .content h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body {
+    height: auto;
+  }
+  header {
+    padding: .5rem 1rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem;
+  }
+  header::after {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--PrimaryColor);
+  }
+  header .logo {
+    margin-top: .9rem;
+  }
+  header .menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  main {
+    padding-top: 6rem;
+  }
+  main .navBar {
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  main .navBar.active {
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--TwoColor);
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+    padding-top: 6rem;
+  }
+  main .navBar li {
+    padding: 0;
+  }
+  main .content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .content .model {
+    font-size: 2rem;
+  }
+  main .gallery {
+    width: auto;
+    right: 1.5rem;
+  }
+}

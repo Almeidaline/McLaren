@@ -1,0 +1,55 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1.5rem;
+  z-index: 100;
+}
+  
+header::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5rem;
+  height: .2rem;
+  width: 40%;
+  background: linear-gradient(90deg, var(--PrimaryColor), transparent);
+}
+
+header .year {
+  font-family: var(--TwoFontFamily);
+  font-size: .9rem;
+  color: var(--OneColor);
+  font-weight: 800;
+  margin-top: 2rem;
+}
+
+header .logo img {
+  max-width: 12.5rem;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+header .menu {
+  position: relative;
+  height: 1.3rem;
+  width: 1.3rem;
+  background: url(../assets/img/menu-3-fill.png) no-repeat;
+  background-size: 1.3rem;
+  background-position: center;
+  filter: invert(1);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+header .menu.active {
+  height: 1.5rem;
+  width: 1.5rem;
+  background: url(../assets/img/close-line.png) no-repeat;
+  background-size: 1.5rem;
+}

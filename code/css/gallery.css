@@ -1,0 +1,29 @@
+main .gallery {
+  position: absolute;
+  left: 1.5rem;
+  bottom: -2rem;
+  width: 55%;
+  height: 35%;
+  z-index: 80;
+  background: transparent;
+  box-shadow: 0 .625rem 2.5rem rgba(0, 0, 0, .5), 0 -.625rem 2.5rem rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .gallery .carousel {
+  width: 100%;
+  height: 100%;
+}
+
+main .gallery .carousel .carousel-item {
+  width: 14rem;
+  cursor: pointer;
+}
+
+main .gallery .carousel .carousel-item img {
+  border-radius: .6rem;
+  object-fit: cover;
+  object-position: center;
+}

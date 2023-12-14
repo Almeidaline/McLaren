@@ -1,0 +1,67 @@
+main .content {
+  position: relative;
+  max-width: 55%;
+  padding: 0 0 12rem;
+  z-index: 80;
+}
+
+main .content h1 {
+  font-family: var(--TwoFontFamily);
+  color: var(--OneColor);
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+}
+
+main .content .model {
+  display: none;
+  color: var(--PrimaryColor);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+main .content .mclaren-2 {
+  color: var(--ThreeColor);
+}
+
+main .content .mclaren-3 {
+  color: var(--FourColor);
+}
+
+main .content .mclaren-4 {
+  color: var(--FiveColor);
+}
+
+main .content .mclaren-5 {
+  color: var(--SixColor);
+}
+
+main .content .model.active {
+  display: block;
+}
+
+main .content p {
+  margin: 1rem 0 3rem;
+  font-size: 1.1rem;
+  color: var(--OneColor);
+  font-weight: 200;
+}
+
+main .content a {
+  position: relative;
+  width: max-content;
+  color: var(--OneColor);
+  padding: .8rem 2rem;
+  background: transparent;
+  border-bottom: .1rem solid;
+  border-image: linear-gradient(90deg, transparent, var(--PrimaryColor), var(--PrimaryColor), transparent) 30;
+  box-shadow: var(--TwoBoxShadow);
+  border-radius: .3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: all .3s ease;
+}
+
+main .content a:hover {
+  box-shadow: var(--ThreeBoxShadow);
+}
